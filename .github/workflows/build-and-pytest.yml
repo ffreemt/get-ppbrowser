@@ -1,0 +1,36 @@
+name: build-and-pytest
+
+on:
+  push:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: [3.7, 3.8]
+        poetry-version: [1.0, 1.1.2]
+        os: [ubuntu-18.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run image
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+      - name: install packages
+        run: |
+          poetry install
+          # poetry install --no-dev
+      - name: Run extend-noip
+        env:
+          PPBROWSER_DEBUG: 1
+        run: |
+          poetry run pytest tests
+          # poetry run python -m extend_noip -s
+          # -d show debug messages
+          # -s turn on short delay (sleepon)
+          # -i info only (no attempt to extend)

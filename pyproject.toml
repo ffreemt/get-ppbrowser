@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "get-ppbrowser"
+version = "0.1.0"
+description = "Create a valid pyppeteer browser"
+authors = ["freemt"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ffreemt/get-ppbrowser"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+logzero = "^1.6.3"
+pydantic = "^1.7.3"
+python-dotenv = "^0.15.0"
+pyppeteer2 = "^0.2.2"
+pytest-asyncio = "^0.14.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,8 @@
+.env
+.venv
+*.bat
+pad*.py
+tests/__pycache__
+links
+extend_noip/__pycache__
+dist
