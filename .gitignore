@@ -4,5 +4,5 @@
 pad*.py
 tests/__pycache__
 links
-extend_noip/__pycache__
+get_ppbrowser/__pycache__
 dist
