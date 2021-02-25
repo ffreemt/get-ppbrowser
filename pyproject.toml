@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "get-ppbrowser"
-version = "0.1.0"
+version = "0.1.1"
 description = "Create a valid pyppeteer browser"
 authors = ["freemt"]
 license = "MIT"

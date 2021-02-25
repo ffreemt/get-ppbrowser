@@ -1,4 +1,4 @@
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .get_ppbrowser import get_ppbrowser, LOOP, BROWSER
 
