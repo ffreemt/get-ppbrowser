@@ -1,0 +1,11 @@
+{
+  "include": ["tests", "get_ppbrowser"],
+  "venvPath": ".venv/Scripts",
+  "reportTypeshedErrors": false,
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+
+  "pythonVersion": "3.7",
+
+	"ignore": []
+}

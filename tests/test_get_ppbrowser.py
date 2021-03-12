@@ -4,7 +4,8 @@ import pyppeteer
 from get_ppbrowser import get_ppbrowser, BROWSER, LOOP
 
 #  All test coroutines will be treated as marked.
-pytestmark = pytest.mark.asyncio
+# pytestmark = pytest.mark.asyncio
+# uncomment line7  and change test to async/await
 
 
 def test_browser():
