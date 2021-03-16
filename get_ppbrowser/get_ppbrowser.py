@@ -1,6 +1,8 @@
 """Get a valid pyppeteer browser.
 
-frmo exttend-euserv, extracted from deepl_tr_pp.
+from exttend-euserv, extracted from deepl_tr_pp.
+
+rid of LOOP and BROWSER
 """
 # pylint: disable=too-many-arguments, too-many-locals, too-many-branches, too-many-statements
 
@@ -100,7 +102,7 @@ async def get_ppbrowser(
     # logger.debug("page.goto deepl time: %.2f s", default_timer() - then)
     return browser
 
-
+_ = """
 try:
     BROWSER = LOOP.run_until_complete(get_ppbrowser(not HEADFUL))
 except Exception as exc:
@@ -111,3 +113,4 @@ except Exception as exc:
     )
     logger.warning(" %s", "Note that this will also kill your chrome browser.")
     raise SystemExit(1)
+# """
