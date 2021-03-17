@@ -7,9 +7,8 @@ rid of LOOP and BROWSER
 # pylint: disable=too-many-arguments, too-many-locals, too-many-branches, too-many-statements
 
 from typing import (
-    # List,
+    Any,
     Optional,
-    # Tuple,
     Union,
 )
 
@@ -45,6 +44,7 @@ async def get_ppbrowser(
         headless: bool = not HEADFUL,
         proxy: Optional[str] = PROXY,
         executable_path: Optional[Union[str, Path]] = None,
+        **kwargs: Any,
 ) -> pyppeteer.browser.Browser:
     # fmt: on
     """Get a puppeeter browser.
@@ -82,6 +82,7 @@ async def get_ppbrowser(
                 # "--autoClose=False",
                 f"--proxy-server={proxy}",
                 "--disable-popup-blocking",
+                "--ignoreHTTPSErrors"
             ],
             ignoreDefaultArgs=[
                 "--enable-automation",  # set window.navigator.webdriver to undefined

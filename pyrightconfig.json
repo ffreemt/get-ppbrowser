@@ -1,5 +1,5 @@
 {
-  "include": ["tests", "get_ppbrowser"],
+	"include": ["tests", "get_ppbrowser"],
   "venvPath": ".venv/Scripts",
   "reportTypeshedErrors": false,
   "reportMissingImports": true,
